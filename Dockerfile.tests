@@ -1,0 +1,14 @@
+FROM sabarishnarain/android-docker-espresso:tests-sdk29.0.3gr6.7.1
+
+WORKDIR /usr
+
+COPY build.gradle ./
+
+COPY gradle.properties ./
+COPY app ./app
+COPY settings.gradle ./
+
+
+
+ENV APP_NAME com.example.demoandroid
+ENV DEVICE_ID beb780a0
